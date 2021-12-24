@@ -46,3 +46,5 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  post-if: success()
+  post-entrypoint: '/usr/local/bin/shutdown.sh'
